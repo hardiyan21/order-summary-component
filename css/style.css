@@ -1,0 +1,143 @@
+/* global */
+
+:root {
+  /* Primary */
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+
+  /* Neutral */
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+}
+
+p {
+  color: var(--desaturated-blue);
+}
+
+/* global styling */
+
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../images/pattern-background-desktop.svg);
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-color: var(--pale-blue);
+}
+
+@media (max-width: 768px) {
+  main {
+    background-image: url(../images/pattern-background-mobile.svg);
+  }
+}
+
+main .container {
+  width: 400px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  background-color: white;
+}
+
+main .container .main-img {
+  width: 400px;
+  border-radius: 10px 10px 0 0;
+  -webkit-border-radius: 10px 10px 0 0;
+  -moz-border-radius: 10px 10px 0 0;
+  -ms-border-radius: 10px 10px 0 0;
+  -o-border-radius: 10px 10px 0 0;
+}
+
+main .container .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+main .container .content h2 {
+  margin: 10px auto 0;
+  color: var(--dark-blue);
+  font-weight: 900;
+}
+
+main .container .content h2 + p {
+  width: 295px;
+  text-align: center;
+  margin: 10px auto 20px;
+}
+
+main .container .content .music-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+  background-color: var(--very-pale-blue);
+  padding: 15px 20px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+main .container .content .music-form .change-iki {
+  color: var(--bright-blue);
+  font-weight: bold;
+}
+
+main .container .content .music-form .planning {
+  display: flex;
+  flex-direction: column;
+  margin-right: 27px;
+}
+
+main .container .content .music-form .planning .plan {
+  color: var(--dark-blue);
+  font-weight: 900;
+}
+
+main .container .content .proceed {
+  width: 300px;
+  background-color: var(--bright-blue);
+  padding: 15px 20px;
+  color: white;
+  border: none;
+  letter-spacing: 1px;
+  font-weight: bold;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  box-shadow: 0 11px 32px hsl(223deg 47% 23% / 53%);
+}
+
+main .container .content .cancel-iki {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--desaturated-blue);
+  transition: all 0.2s ease;
+  margin-bottom: 15px;
+}
